@@ -1,5 +1,4 @@
-@import "tailwindcss";
-
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +22,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import your Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Apply your font to the whole body */
+body {
+  @apply font-sans text-gray-800 bg-brand-ivory;
+}
+
+/* Optional: smooth font */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4 {
+  @apply font-bold;
 }
