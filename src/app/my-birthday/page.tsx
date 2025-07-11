@@ -114,7 +114,7 @@ export default function MyBirthdayPage() {
           onClick={saveWishlist}
           className="w-full bg-brand-hotpink text-white font-semibold py-3 rounded-lg shadow hover:bg-pink-600 transition"
         >
-          {isSaved ? "✅ Saved!" : "🤍 Save Wishlist"}
+          {isSaved ? "🤍 Saved!" : "🤍 Save Wishlist"}
         </button>
 
         <div className="mt-8">

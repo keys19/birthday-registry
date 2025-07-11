@@ -24,11 +24,13 @@ export default function Dashboard() {
   if (!user) return <p className="p-8 text-lg">Please sign in first.</p>;
 
   async function handleGenerateInvite() {
+    if (!user) return;
     const code = await getOrCreateInviteCode(user.uid);
     setMyCode(code);
   }
 
   async function handleAddFriend() {
+    if (!user) return;
     try {
       await addFriendByInviteCode(user.uid, friendCode.trim());
       setStatus("Friend added!");
@@ -105,7 +107,7 @@ export default function Dashboard() {
             onClick={handleGenerateInvite}
             className="px-4 py-2 bg-brand-yellow text-brand-hotpink rounded-full shadow hover:bg-brand-ivory transition mb-4"
           >
-           Show My Invite Code
+            Show My Invite Code
           </button>
 
           {myCode && (

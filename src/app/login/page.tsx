@@ -9,7 +9,7 @@ import { useWindowSize } from '@react-hook/window-size'
 
 export default function LoginPage() {
   const router = useRouter()
-  const { width, height } = useWindowSize()
+  const [width, height] = useWindowSize()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function LoginPage() {
         Let’s Celebrate!
       </h1>
       <p className="text-lg text-gray-700 mb-10 text-center">
-        Sign in to make your birthday wishes come true!
+        Sign in to make your friends make your birthday wishes come true!
       </p>
 
       <button
